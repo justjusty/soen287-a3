@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Node.js Function Tester</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    form {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="number"],
+    button {
+      padding: 10px;
+      margin-bottom: 10px;
+      width: 100%;
+      max-width: 90%; /* Limit the maximum width */
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      display: block;
+      margin-left: auto; /* Center the inputs */
+      margin-right: auto;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Node.js Function Tester</h1>
+
+<!-- Form to find summation -->
+<h2>Find Summation</h2>
+<form action="/findSummation" method="post">
+  <label for="number">Enter a positive integer:</label>
+  <input type="number" id="number" name="number" min="1" required>
+  <button type="submit">Submit</button>
+</form>
+
+<!-- Form to uppercase first and last letters -->
+<h2>Uppercase First and Last</h2>
+<form action="/uppercaseFirstandLast" method="post">
+  <label for="text">Enter a string:</label>
+  <input type="text" id="text" name="text" required>
+  <button type="submit">Submit</button>
+</form>
+
+<!-- Form to find average and median -->
+<h2>Find Average and Median</h2>
+<form action="/findAverageAndMedian" method="post">
+  <label for="numbers">Enter numbers (comma-separated):</label>
+  <input type="text" id="numbers" name="numbers" placeholder="1,2,3,4" required>
+  <button type="submit">Submit</button>
+</form>
+
+<!-- Form to find the first 4-digit number -->
+<h2>Find First 4-Digit Number</h2>
+<form action="/find4Digits" method="post">
+  <label for="numbers1">Enter numbers separated by spaces:</label>
+  <input type="text" id="numbers1" name="numbers" required>
+  <button type="submit">Submit</button>
+</form>
+
+<!-- Form to track number of visits -->
+<h2>Visit Tracker</h2>
+<form action="/visit" method="get">
+  <button type="submit">Check Number of Visits</button>
+</form>
+
+<!-- Form to validate phone numbers and collect names -->
+<h2>Phone Number Validation</h2>
+<form action="/validatePhoneNumber" method="post">
+  <label for="name">Enter your name:</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="phoneNumber">Enter phone number (ddd-ddd-dddd):</label>
+  <input type="text" id="phoneNumber" name="phoneNumber" required pattern="\d{3}-\d{3}-\d{4}">
+  <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>
